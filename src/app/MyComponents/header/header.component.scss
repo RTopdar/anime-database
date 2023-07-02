@@ -1,0 +1,31 @@
+.header-component{
+    width: 100%;
+    height: 90px;
+    background-color: #2C3360;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999999;
+    position: absolute;
+    .logo{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Indie Flower', cursive;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: max-content;
+        height: max-content;
+        cursor: pointer;
+        position: relative;
+        color: white;
+    }
+    .logout{
+        width: max-content;
+        height: max-content;
+        position: relative;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+    }
+}

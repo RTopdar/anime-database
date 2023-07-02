@@ -1,0 +1,47 @@
+.home-component{
+    display: flex;
+    // position: absolute;
+    background-color: black !important;
+    
+    .all-anime{
+        
+        margin-top: 90px;
+        width: 75%;
+        min-height: calc(100vh - 80px);
+        // border-right: 0.5px solid white;
+        padding: 20px 40px;
+        font-family: "Roboto", sans-serif;
+        .top{
+            display: flex ;
+            align-items: center;
+            justify-content: space-between;
+            h4{
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 5px solid white;
+                padding: 5px;
+                color: white;
+                position: relative;
+                left: 4%;
+            }
+            .view-all{
+                cursor: pointer !important;
+            }
+        }
+    }
+    
+    
+    
+    
+    .popular-anime{
+       
+        width: 25%;
+        margin-top: 90px;
+        min-height: calc(100vh - 90px);
+        padding:  20px 40px;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    
+    
+}
