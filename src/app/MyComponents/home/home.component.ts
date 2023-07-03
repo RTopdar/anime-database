@@ -8,12 +8,26 @@ import { Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit{
   trendingAnime: any;
+  allAnime: any;
+  searchTerm: string = '';
   private url: string = `https://api.jikan.moe/v4/anime?q=`;
+  
   constructor(private http: HttpClient) {
 
   }
   ngOnInit(): void {
     this.getPopularAnime();
+    this.searchAnime();
+  }
+  searchAnime(){
+    fetch(`${this.url}${this.searchTerm}`).then((Response) => {
+      Response.json().then((Result) => {
+        this.allAnime = Result.data;
+        if(this.searchTerm!==''){
+          console.log(this.allAnime);
+        }
+      });
+    });
   }
   getPopularAnime(){
     fetch(`${this.url}`).then((Response) => {

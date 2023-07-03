@@ -5,15 +5,20 @@
     <div class="all-anime">
        <div class="trending-anime">
         <div class="top">
-            <h4>Trending Anime</h4>
-            <div class="view-all btn btn-info"> View All</div>
+            <h4>Search Anime</h4>
+            <div class="mb-3 search">
+                <!-- <label for="exampleInputEmail1" class="form-label">Look For Your Favorite Anime</label> -->
+                <input type="text" class="search-bar" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+            <div class="view-all btn btn-info" (click)="searchAnime()"> Search</div>
         </div>
        </div>
-       <div class="anime-thumbnails">
+       <div class="anime-search">
         
-            <div class="anime">
+            <div class="anime-all" *ngFor="let anime of allAnime">
                 <div class="cover">
-                    <img src="" alt="">
+                    <img [src]="anime.images.jpg.image_url" alt="">
                 </div>
                 <div class="details">
                     <div class="name"></div>
