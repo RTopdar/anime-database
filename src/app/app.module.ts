@@ -8,6 +8,8 @@ import { HomeComponent } from './MyComponents/home/home.component';
 import { HeaderComponent } from './MyComponents/header/header.component';
 import { MovieComponent } from './MyComponents/movie/movie.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './MyComponents/details/details.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    MovieComponent
+    MovieComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

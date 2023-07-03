@@ -29,10 +29,7 @@
             }
         }
         
-        .anime-thumbnails{
-            border: 0.5px solid white;
-            background-color: white;
-        }
+        
     }
     
     
@@ -54,8 +51,41 @@
                 position: relative;
                 left: 4%;
             }
+        
+            
     }
+
+    .anime{
+        border-radius: 10px;
+        // border: 0.5px solid #2C3360;
+        width: 90%;
+        height: 90%;
+        
+        background: rgba(255, 255, 255, 0.16);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.63);
+        padding: 10px;
+        margin: 2%;
+     }
     
     
+     .anime-thumbnails{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .details{
+            font-family: "Roboto", sans-serif;
+            color: white;
+        }
+     }
+    
+     .anime-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
     
 }

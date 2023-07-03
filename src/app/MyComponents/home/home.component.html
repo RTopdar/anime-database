@@ -11,7 +11,7 @@
        </div>
        <div class="anime-thumbnails">
         
-            <div class="movie">
+            <div class="anime">
                 <div class="cover">
                     <img src="" alt="">
                 </div>
@@ -23,6 +23,20 @@
        </div>
     </div>
     <div class="popular-anime">
-        <h4>Trending Anime</h4>
+        <h4>Popular Anime</h4>
+        <div class="anime-thumbnails">
+        
+            <div class="anime" *ngFor="let anime of trendingAnime">
+                <div class="anime-box">
+                    <div class="cover">
+                        <img [src]="anime.images.jpg.image_url" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name">Title: {{anime.title}}</div>
+                        <div class="rating">Rating: {{anime.score}}</div>
+                    </div>
+                </div>
+            </div>
+       </div>
     </div>
 </div>
