@@ -26,7 +26,7 @@ import { DetailsComponent } from './MyComponents/details/details.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HomeComponent, DetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
