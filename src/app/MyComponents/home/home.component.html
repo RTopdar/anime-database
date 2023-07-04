@@ -8,21 +8,21 @@
             <h4>Search Anime</h4>
             <div class="mb-3 search">
                 <!-- <label for="exampleInputEmail1" class="form-label">Look For Your Favorite Anime</label> -->
-                <input type="text" class="search-bar" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm">
+                <input type="text" class="search-bar" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm" (keyup.enter)="searchAnime($event)">
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-              </div>
-            <div class="view-all btn btn-info" (click)="searchAnime()"> Search</div>
+            </div>
+            <div class="view-all btn btn-info" (click)="searchAnime($event)"> Search</div>
         </div>
        </div>
        <div class="anime-search">
         
-            <div class="anime-all" *ngFor="let anime of allAnime">
+            <div class="anime-all anime" *ngFor="let anime of allAnime">
                 <div class="cover">
-                    <img [src]="anime.images.jpg.image_url" alt="">
+                    <img [src]="anime.images.jpg.image_url" alt="" loading="lazy">
                 </div>
                 <div class="details">
-                    <div class="name"></div>
-                    <div class="rating"></div>
+                    <div class="name">Title: {{anime.title}}</div>
+                    <div class="rating">Rating: {{anime.score}}</div>
                 </div>
             </div>
        </div>

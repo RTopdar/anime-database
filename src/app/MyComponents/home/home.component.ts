@@ -11,19 +11,21 @@ export class HomeComponent implements OnInit{
   allAnime: any;
   searchTerm: string = '';
   private url: string = `https://api.jikan.moe/v4/anime?q=`;
-  
+  e: Event | any;
   constructor(private http: HttpClient) {
 
   }
   ngOnInit(): void {
     this.getPopularAnime();
-    this.searchAnime();
+    this.searchAnime(this.e);
   }
-  searchAnime(){
+  searchAnime(event: any){
+    event.preventDefault();
     fetch(`${this.url}${this.searchTerm}`).then((Response) => {
       Response.json().then((Result) => {
         this.allAnime = Result.data;
-        if(this.searchTerm!==''){
+        // if(this.searchTerm!=='')
+        {
           console.log(this.allAnime);
         }
       });
@@ -35,7 +37,7 @@ export class HomeComponent implements OnInit{
       Response.json().then((Res) => {
         // const res = Res.data;
         this.trendingAnime = Res.data;
-        this.trendingAnime.splice(0,2);
+        this.trendingAnime.splice(0,3);
         this.trendingAnime.sort((a: any,b: any)=>a.rank-b.rank);
         console.log(this.trendingAnime);
         // res.map((item: any, index: number) => {

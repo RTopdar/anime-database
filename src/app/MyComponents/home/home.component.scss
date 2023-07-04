@@ -38,6 +38,11 @@
             }
             
         }
+        .anime-search{
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
         
         
     }
@@ -86,16 +91,17 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        .details{
-            font-family: "Roboto", sans-serif;
-            color: white;
-        }
+        
      }
     
      .anime-box{
         display: flex;
         flex-direction: column;
         align-items: center !important;
+    }
+    .details{
+        font-family: "Roboto", sans-serif;
+        color: white;
     }
     
 }
