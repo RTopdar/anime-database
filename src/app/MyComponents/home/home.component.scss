@@ -27,16 +27,6 @@
             .view-all{
                 cursor: pointer !important;
             }
-            .search{
-                
-                width: 50%;
-               
-                .search-bar{
-                    border-radius: 5px;
-                    width: 100%;
-                }
-            }
-            
         }
         .anime-search{
             display: grid !important;
@@ -74,7 +64,7 @@
         border-radius: 10px;
         // border: 0.5px solid #2C3360;
         width: 90%;
-        height: max-content;
+        height: 90%;
         
         background: rgba(255, 255, 255, 0.16);
         border-radius: 16px;

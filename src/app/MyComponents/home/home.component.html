@@ -1,33 +1,41 @@
 <app-header></app-header>
-<app-details [id] = "mal_id"></app-details>
 
 
 <div class="home-component">
     <div class="all-anime">
        <div class="trending-anime">
         <div class="top">
+<<<<<<< HEAD
             <h4>Search Anime</h4>
             <div class="mb-3 search">
                 <!-- <label for="exampleInputEmail1" class="form-label">Look For Your Favorite Anime</label> -->
                 <input type="text" class="search-bar" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm" (keyup.enter)="searchAnime($event)">
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
-            <div class="view-all btn btn-info" type = "button" (click)="searchAnime($event)"> Search</div>
+            <div class="view-all btn btn-info" (click)="searchAnime($event)"> Search</div>
+=======
+            <h4>Trending Anime</h4>
+            <div class="view-all btn btn-info"> View All</div>
+>>>>>>> parent of 67fcb65 (Added search functionality)
         </div>
        </div>
-       <div class="anime-search">
+       <div class="anime-thumbnails">
         
+<<<<<<< HEAD
             <div class="anime-all anime" *ngFor="let anime of allAnime">
-                <div class="anime-box" (click)="getMalId(anime.mal_id)">
-                    <div class="cover">
-                        <img [src]="anime.images.jpg.image_url" alt="" loading="lazy">
-                    </div>
-                    <div class="details">
-                        <div class="name">Title: {{anime.title}}</div>
-                        <div class="rating">Rating: {{anime.score}}</div>
-                    </div>
+                <div class="cover">
+                    <img [src]="anime.images.jpg.image_url" alt="" loading="lazy">
+=======
+            <div class="anime">
+                <div class="cover">
+                    <img src="" alt="">
+>>>>>>> parent of 67fcb65 (Added search functionality)
                 </div>
+                <div class="details">
+                    <div class="name">Title: {{anime.title}}</div>
+                    <div class="rating">Rating: {{anime.score}}</div>
                 </div>
+            </div>
        </div>
     </div>
     <div class="popular-anime">
@@ -35,7 +43,7 @@
         <div class="anime-thumbnails">
         
             <div class="anime" *ngFor="let anime of trendingAnime">
-                <div class="anime-box" (click)="getMalId(anime.mal_id)">
+                <div class="anime-box">
                     <div class="cover">
                         <img [src]="anime.images.jpg.image_url" alt="">
                     </div>
