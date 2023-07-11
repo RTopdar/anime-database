@@ -15,6 +15,7 @@
             display: flex ;
             align-items: center;
             justify-content: space-between;
+           
             h4{
                 text-transform: uppercase;
                 font-weight: bold;
@@ -92,6 +93,10 @@
     .details{
         font-family: "Roboto", sans-serif;
         color: white;
+    }
+    .search{
+        width:80%;
+        border-radius: 10px;
     }
     
 }

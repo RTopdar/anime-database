@@ -9,7 +9,7 @@
             <h4>Search Anime</h4>
             <div class="mb-3 search">
                 <!-- <label for="exampleInputEmail1" class="form-label">Look For Your Favorite Anime</label> -->
-                <input type="text" class="search-bar" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm" (keyup.enter)="searchAnime($event)">
+                <input type="text" class="search" id="search=box" aria-describedby="search-bar" placeholder="Find your favorite anime" [(ngModel)] = "searchTerm" (keyup.enter)="searchAnime($event)">
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
             <div class="view-all btn btn-info" type = "button" (click)="searchAnime($event)"> Search</div>
@@ -18,7 +18,7 @@
        <div class="anime-search">
         
             <div class="anime-all anime" *ngFor="let anime of allAnime">
-                <div class="anime-box">
+                <div class="anime-box" (click)="redirect(anime.mal_id)">
                     <div class="cover">
                         <img [src]="anime.images.jpg.image_url" alt="" loading="lazy">
                     </div>
