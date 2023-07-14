@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,13 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+  @Output() send_id = new EventEmitter;
   ngOnInit(): void {
     this.getTrendingAnime();
-    
+
   }
   allAnime: any;
+  mal_id: number = 0;
   trendingAnime: any;
   private url: string = `https://api.jikan.moe/v4/anime?q=`;
   private malUrl: string = `https://myanimelist.net/anime/`;
@@ -34,8 +36,8 @@ export class HomeComponent implements OnInit{
     fetch(`${this.url}`).then((Response) => {
       Response.json().then((Result) => {
         this.trendingAnime = Result.data;
-        
-        
+
+
           console.log(this.trendingAnime);
         
       });
@@ -43,7 +45,9 @@ export class HomeComponent implements OnInit{
   }
   
   redirect(id:number){
+    this.mal_id = id;
     window.open(`${this.malUrl}${id}`,"_blank");
+    this.send_id.emit(this.mal_id);
 
   }
 }

@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss']
 })
-export class DetailsComponent {
-
+export class DetailsComponent implements OnInit {
+  @Input() id: number=0;
+  ngOnInit(): void {
+      
+  }
 }
