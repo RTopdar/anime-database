@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Router } from '@angular/router';
+import { DataShareService } from 'src/app/services/data-share.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,7 @@ import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HomeComponent implements OnInit{
   @Output() send_id = new EventEmitter;
+  constructor(private router: Router, private shareData: DataShareService){}
   ngOnInit(): void {
     this.getTrendingAnime();
 
@@ -46,8 +49,11 @@ export class HomeComponent implements OnInit{
   
   redirect(id:number){
     this.mal_id = id;
-    window.open(`${this.malUrl}${id}`,"_blank");
-    this.send_id.emit(this.mal_id);
+    // console.log(this.mal_id);
+    this.shareData.mal_id = this.mal_id;
+    // window.open(`${this.malUrl}${id}`,"_blank");
+    // this.send_id.emit(this.mal_id);
+    this.router.navigate(['details']);
 
   }
 }
