@@ -10,6 +10,7 @@ import { MovieComponent } from './MyComponents/movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { DetailsComponent } from './MyComponents/details/details.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,15 @@ import { DetailsComponent } from './MyComponents/details/details.component';
     HomeComponent,
     HeaderComponent,
     MovieComponent,
-    DetailsComponent
+    DetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

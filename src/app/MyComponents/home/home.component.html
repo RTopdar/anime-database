@@ -23,7 +23,7 @@
                         <img [src]="anime.images.jpg.image_url" alt="" loading="lazy">
                     </div>
                     <div class="details">
-                        <div class="name">Title: {{anime.title}}</div>
+                        <div class="name">Title: {{anime.title_english}}</div>
                         <div class="rating">Rating: {{anime.score}}</div>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
         <div class="anime-thumbnails">
         
             <div class="anime" *ngFor="let anime of trendingAnime">
-                <div class="anime-box">
+                <div class="anime-box" (click)="redirect(anime.mal_id)">
                     <div class="cover">
                         <img [src]="anime.images.jpg.image_url" alt="">
                     </div>
                     <div class="details">
-                        <div class="name">Title: {{anime.title}}</div>
+                        <div class="name">Title: {{anime.title_english}}</div>
                         <div class="rating">Rating: {{anime.score}}</div>
                     </div>
                 </div>

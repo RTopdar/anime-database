@@ -1,1 +1,20 @@
-<div>It works</div>
+<app-header></app-header>
+<div class="detail" >
+    <div class="thumbnail">
+        <img src={{details.images.jpg.image_url}} alt="{{details.title}}" srcset="" class="img-thumbnail">
+        <div class="info">
+            <p><b>Title: </b>{{details.title_english}}</p>
+            <p><b>Mal ID: </b>{{details.mal_id}}</p>
+            <p><b>Rating: </b>{{details.rating}}</p>
+            <p><b>Episodes :</b>{{details.episodes}}</p>
+            <p><b>Duration: </b>{{details.duration}}</p>
+            <p><b>Popularity: </b>{{details.popularity}}</p>
+            <p><b>Score: </b>{{details.score}}</p>
+            <p><b>Year: </b>{{details.year}}</p>
+        </div>
+    </div>
+    <div class="synopsis">
+        <p>{{details.synopsis}}</p>
+    </div>
+  
+</div>

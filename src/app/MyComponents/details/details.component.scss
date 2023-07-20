@@ -1,0 +1,35 @@
+.detail{
+    position: absolute;
+    // top: 20%;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    .thumbnail{
+        display: flex;
+        position: relative;
+        top: 20%;
+        left: 10%;
+        width: max-content;
+        .img-thumbnail{
+            width: max-content;
+        }
+        .info{
+            width: max-content;
+            position: relative;
+            left: 30%;
+        }
+    
+    }
+    .synopsis{
+        width: 60%;
+        position: relative;
+        display: flex;
+        position: relative;
+        top: 30%;
+        left: 10%;
+        
+    }
+}

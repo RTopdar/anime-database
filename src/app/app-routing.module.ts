@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'movie', component: MovieComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: `details`, component: DetailsComponent},
+  {path:``, component: LoginComponent},
   {path: '**', component: LoginComponent},
 ];
 
